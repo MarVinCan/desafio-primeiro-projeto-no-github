@@ -2,29 +2,35 @@ package entities;
 
 public class Circulo extends Forma{
 	
-	private double altura;
-	private double base;
+	private double raio;
 	
 	public Circulo() {
 		
 	}
 	
-	public Circulo(double altura, double base) {
+	public Circulo(double raio) {
 		super();
-		this.altura = altura;
-		this.base = base;
+		this.raio = raio;
+	}
+
+	public double getRaio() {
+		return raio;
+	}
+
+	public void setRaio(double raio) {
+		this.raio = raio;
 	}
 
 	@Override
 	public double perimetro() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return 2 * Math.PI * raio;
 	}
 
 	@Override
 	public double area() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return Math.PI * raio * raio;
 	}
 	
 	
